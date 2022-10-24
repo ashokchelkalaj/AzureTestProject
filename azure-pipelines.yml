@@ -69,7 +69,7 @@ stages:
   jobs:
     - deployment: DeployWebsite
       displayName: 'Deploy website'
-      environment: 'Winiis'
+      environment: 'win'
       strategy:
        runOnce:
            deploy:
