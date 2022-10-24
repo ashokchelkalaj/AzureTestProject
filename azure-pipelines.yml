@@ -85,8 +85,11 @@ stages:
                 - task: IISWebAppManagementOnMachineGroup@0
                   inputs:
                     EnableIIS: true
-                    IISDeploymentType: 'IISWebApplication'
-                    PhysicalPathForApplication: '%SystemDrive%\inetpub\wwwroot'
+                    IISDeploymentType: 'IISWebsite'
+                    ActionIISWebsite: 'CreateOrUpdateWebsite'
+                    WebsiteName: 'AzureTestProject'
+                    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
+                    WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
                 - script: echo $(Pipeline.Workspace)\AzureTestProject\RoundTheCode.AzureTestProject
 
                 - task: IISWebAppDeploymentOnMachineGroup@0
