@@ -105,7 +105,7 @@ stages:
                   name: 'StartIIS'
                   displayName: 'Start IIS website'                     
                   inputs:
-                    EnableIIS: true
+                    
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'StartWebsite'
                     StartStopWebsiteName: 'AzureTestProject'
