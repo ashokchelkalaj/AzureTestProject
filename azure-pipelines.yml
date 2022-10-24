@@ -85,9 +85,8 @@ stages:
                 - task: IISWebAppManagementOnMachineGroup@0
                   inputs:
                     EnableIIS: true
-                    IISDeploymentType: 'IISWebsite'
-                    ActionIISWebsite: 'StopWebsite'
-                    StartStopWebsiteName: 'AzureTestProject'
+                    IISDeploymentType: 'IISWebApplication'
+                    PhysicalPathForApplication: '%SystemDrive%\inetpub\wwwroot'
                 - script: echo $(Pipeline.Workspace)\AzureTestProject\RoundTheCode.AzureTestProject
 
                 - task: IISWebAppDeploymentOnMachineGroup@0
