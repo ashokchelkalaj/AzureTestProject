@@ -82,8 +82,13 @@ stages:
                   artifact: 'AzureTestProject'
                 
                
-
-               
+                - task: IISWebAppManagementOnMachineGroup@0
+                  inputs:
+                    EnableIIS: true
+                    IISDeploymentType: 'IISWebsite'
+                    ActionIISWebsite: 'StopWebsite'
+                    StartStopWebsiteName: 'AzureTestProject'
+                
                 - task: IISWebAppDeploymentOnMachineGroup@0
                   name: 'DeployIIS'
                   displayName: 'Deploy IIS website'                
