@@ -108,4 +108,4 @@ stages:
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'StartWebsite'
                     StartStopWebsiteName: 'AzureTestProject'
-                    AppCmdCommands: '%systemroot%\system32\inetsrv\APPCMD list sites'
+                    AppCmdCommands: '%systemroot%\system32\inetsrv\APPCMD list site "Default Web Site"'
