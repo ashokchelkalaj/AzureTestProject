@@ -69,7 +69,10 @@ stages:
   jobs:
     - deployment: DeployWebsite
       displayName: 'Deploy website'
-      environment: 'win'
+      environment: 
+        name: win
+        resourceType: virtualMachine
+        resourceName: win 
       strategy:
        runOnce:
            deploy:
