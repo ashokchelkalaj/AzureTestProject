@@ -105,7 +105,7 @@ stages:
                   name: 'StartIIS'
                   displayName: 'Start IIS website'                     
                   inputs:
-                    
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'StartWebsite'
                     StartStopWebsiteName: 'AzureTestProject'
+                    AppCmdCommands: '%systemroot%\system32\inetsrv\APPCMD list sites'
