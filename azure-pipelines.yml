@@ -91,7 +91,6 @@ stages:
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'CreateOrUpdateWebsite'
                     WebsiteName: 'AzureTestProject'
-                    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
                     WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
                 - script: echo $(Pipeline.Workspace)\AzureTestProject\RoundTheCode.AzureTestProject
 
