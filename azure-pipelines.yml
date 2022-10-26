@@ -72,7 +72,7 @@ stages:
       environment: 
         name: windows
         resourceType: VirtualMachine
-        resourceName: windos
+        resourceName: windowss
       strategy:
        runOnce:
            deploy:
