@@ -101,7 +101,7 @@ stages:
                   inputs:
                   
                     WebSiteName: 'AzureTestProject'
-                    Package: ' D:\a\1\AzureTestProject\RoundTheCode.AzureTestProject'
+                    Package:  C:\azagent\A1\_work\1\
                     TakeAppOfflineFlag: true
                     XmlVariableSubstitution: True
                
