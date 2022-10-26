@@ -103,12 +103,6 @@ stages:
                     WebSiteName: 'AzureTestProject'
                     Package: ' D:\a\1\AzureTestProject\RoundTheCode.AzureTestProject'
                     TakeAppOfflineFlag: true
-                
-                - task: IISWebAppManagementOnMachineGroup@0
-                  name: 'StartIIS'
-                  displayName: 'Start IIS website'                     
-                  inputs:
-                    IISDeploymentType: 'IISWebsite'
-                    ActionIISWebsite: 'StartWebsite'
-                    StartStopWebsiteName: 'AzureTestProject'
+                    XmlVariableSubstitution: True
+               
                     
