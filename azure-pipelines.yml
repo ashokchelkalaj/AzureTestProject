@@ -88,11 +88,11 @@ stages:
                   inputs:            
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'CreateOrUpdateWebsite'
-                    WebsiteName: '$(websiteName)'
-                    WebsitePhysicalPath: '$(websitePhysicalPath)'
+                    WebsiteName: 'AzureTestProject'
+                    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
                     WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
                     CreateOrUpdateAppPoolForWebsite: true
-                    AppPoolNameForWebsite: '$(appPoolName)'
+                    AppPoolNameForWebsite: 'AzureTestProject'
                     DotNetVersionForWebsite: 'No Managed Code'
                     PipeLineModeForWebsite: 'Integrated'
                     AppPoolIdentityForWebsite: 'ApplicationPoolIdentity'
@@ -104,7 +104,7 @@ stages:
                               "protocol":"http",
                               "ipAddress":"*",
                               "hostname":"",
-                              "port":"9090",
+                              "port":"5050",
                               "sslThumbprint":"",
                               "sniFlag":false
                             }
