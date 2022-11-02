@@ -53,7 +53,7 @@ stages:
         publishWebProjects: true
         projects: '$(project)'
         arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-        zipAfterPublish: false
+        zipAfterPublish: true
 
     - task: PublishBuildArtifacts@1
       inputs:
@@ -118,7 +118,7 @@ stages:
                   inputs:
                     
                     WebSiteName: 'AzureTestProject'
-                    Package:  C:\azagent\A1\_work\1\drop\AzureTestProject.zip
+                    Package:  C:\azagent\A1\_work\4\**\*.zip
                     TakeAppOfflineFlag: true
                     XmlVariableSubstitution: True
                
