@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- '*'
+- 'azure-pipelines'
 
 stages:
 - stage: 'Build'
@@ -70,9 +70,8 @@ stages:
     - deployment: DeployWebsite
       displayName: 'Deploy website'
       environment: 
-        name: windows
+        name: window123
         resourceType: VirtualMachine
-        resourceName: windowss
       strategy:
        runOnce:
            deploy:
