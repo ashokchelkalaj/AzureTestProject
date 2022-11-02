@@ -116,9 +116,9 @@ stages:
                   name: 'DeployIIS'
                   displayName: 'Deploy IIS website'                
                   inputs:
-                  
+                    
                     WebSiteName: 'AzureTestProject'
-                    Package:  C:\azagent\A1\_work\1\
+                    Package:  C:\azagent\A1\_work\1\drop\AzureTestProject.zip
                     TakeAppOfflineFlag: true
                     XmlVariableSubstitution: True
                
