@@ -89,7 +89,7 @@ stages:
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'CreateOrUpdateWebsite'
                     WebsiteName: 'AzureTestProject'
-                    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
+                    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot\Azuretestproject'
                     WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
                     CreateOrUpdateAppPoolForWebsite: true
                     AppPoolNameForWebsite: 'AzureTestProject'
