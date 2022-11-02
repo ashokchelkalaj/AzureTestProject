@@ -85,12 +85,31 @@ stages:
                 
                
                 - task: IISWebAppManagementOnMachineGroup@0
-                  inputs:
-                    EnableIIS: true
+                  inputs:            
                     IISDeploymentType: 'IISWebsite'
                     ActionIISWebsite: 'CreateOrUpdateWebsite'
-                    WebsiteName: 'AzureTestProject'
+                    WebsiteName: '$(websiteName)'
+                    WebsitePhysicalPath: '$(websitePhysicalPath)'
                     WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+                    CreateOrUpdateAppPoolForWebsite: true
+                    AppPoolNameForWebsite: '$(appPoolName)'
+                    DotNetVersionForWebsite: 'No Managed Code'
+                    PipeLineModeForWebsite: 'Integrated'
+                    AppPoolIdentityForWebsite: 'ApplicationPoolIdentity'
+                    AddBinding: true
+                    Bindings: |
+                      {
+                         bindings:[
+                            {
+                              "protocol":"http",
+                              "ipAddress":"*",
+                              "hostname":"",
+                              "port":"9090",
+                              "sslThumbprint":"",
+                              "sniFlag":false
+                            }
+                         ]
+                       }
                 - script: echo $(Pipeline.Workspace)\AzureTestProject\RoundTheCode.AzureTestProject
 
                 - task: IISWebAppDeploymentOnMachineGroup@0
