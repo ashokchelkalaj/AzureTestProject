@@ -118,7 +118,7 @@ stages:
                   inputs:
                     
                     WebSiteName: 'AzureTestProject'
-                    Package:  $(Pipeline.Workspace)\*.zip
+                    Package:  C:\azagent\A2\_work\1\AzureTestProject\RoundTheCode.AzureTestProject.zip
                     TakeAppOfflineFlag: true
                     XmlVariableSubstitution: True
                
