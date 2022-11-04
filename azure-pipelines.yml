@@ -70,7 +70,7 @@ stages:
     - deployment: DeployWebsite
       displayName: 'Deploy website'
       environment: 
-        name: window123
+        name: windows
         resourceType: VirtualMachine
       strategy:
        runOnce:
@@ -118,7 +118,7 @@ stages:
                   inputs:
                     
                     WebSiteName: 'AzureTestProject'
-                    Package:  C:\azagent\A1\_work\4\**\*.zip
+                    Package:  $(Pipeline.Workspace)\*.zip
                     TakeAppOfflineFlag: true
                     XmlVariableSubstitution: True
                
